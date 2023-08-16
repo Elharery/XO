@@ -20,6 +20,7 @@ const box7 = document.getElementById("box-7");
 const box8 = document.getElementById("box-8");
 const box9 = document.getElementById("box-9");
 
+
 // box.forEach((e) => {
 //   e.classList.toggle("active")
 // })
@@ -108,7 +109,7 @@ box.forEach((e) => {
       ) {
         successGameO();
       }
-      console.log("Yes box7 = box68 = box9");
+      console.log("Yes box7 = box8 = box9");
     }
     if (
       box1.textContent === box4.textContent &&
@@ -202,26 +203,22 @@ box.forEach((e) => {
       }
       console.log("Yes box3 = box6 = box9");
     }
-    if (
-      box3.textContent === box8.textContent &&
-      box3.textContent === box9.textContent
-    ) {
-      if (
-        box3.textContent === "X" &&
-        box8.textContent === "X" &&
-        box9.textContent === "X"
-      ) {
-        successGameX();
-      }
-      if (
-        box3.textContent === "O" &&
-        box8.textContent === "O" &&
-        box9.textContent === "O"
-      ) {
-        successGameO();
-      }
-      console.log("Yes box3 = box8 = box9");
-    }
+    // if (box3.textContent === box8.textContent &&box3.textContent === box9.textContent) {
+    //   if (box3.textContent === "X" && box8.textContent === "X" && box9.textContent === "X") {
+    //     successGameX();
+    //   }
+    //   if (
+    //     box3.textContent === "O" &&
+    //     box8.textContent === "O" &&
+    //     box9.textContent === "O"
+    //   ) {
+    //     successGameO();
+    //   }
+    //   console.log("Yes box3 = box8 = box9");
+    // }
+    // if (box1.textContent !== box2.textContent && box1.textContent !== box3.textContent) {
+    //   draw()
+    // }
   });
 });
 
@@ -305,6 +302,17 @@ function successGameO() {
   }, 2000);
 }
 
+document.getElementById("clear").onclick = () => {
+  box[0].innerHTML = "";
+  box[1].innerHTML = "";
+  box[2].innerHTML = "";
+  box[3].innerHTML = "";
+  box[4].innerHTML = "";
+  box[5].innerHTML = "";
+  box[6].innerHTML = "";
+  box[7].innerHTML = "";
+  box[8].innerHTML = "";
+};
 document.querySelector("button").onclick = () => {
   location.reload();
 };
